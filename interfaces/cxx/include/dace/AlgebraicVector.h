@@ -252,6 +252,9 @@ template<> DACE_API AlgebraicVector<DA> integ(const AlgebraicVector<DA> &obj, co
 template<> DACE_API compiledDA compile(const AlgebraicVector<DA> &obj);
 template<> DACE_API AlgebraicVector<DA> plug(const AlgebraicVector<DA> &obj, const unsigned int var, const double val);
 
+// absolute of a vector
+template <typename T> DACE_API AlgebraicVector<T> abs(const AlgebraicVector<T>& obj);
+    
 // shortcuts for common vector types
 typedef AlgebraicVector<DA> vectorDA;       //!< Shorthand notation for AlgebraicVector<DA>.
 typedef AlgebraicVector<double> vectordb;   //!< Shorthand notation for AlgebraicVector<double>.
