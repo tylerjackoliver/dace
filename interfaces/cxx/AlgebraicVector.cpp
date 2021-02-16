@@ -395,4 +395,17 @@ template<> AlgebraicVector<DA> plug(const AlgebraicVector<DA> &obj, const unsign
     return obj.plug(var, val);
 }
 
+template <typename T>
+AlgebraicVector<T> abs(const AlgebraicVector<T> &obj)
+{
+   /*! Evaluation of the absolute value of an Algebraic Vector (i.e. the abs of each element separately)
+   \param[in] The vector to evaluate.
+   \return The absolute of the vector.
+   */
+   AlgebraicVector<T> result( obj.size() );
+   for (size_t i = 0; i < obj.size(); ++i)
+   {
+      result[i] = abs( obj[i] );
+   }
+   return result;
 }
