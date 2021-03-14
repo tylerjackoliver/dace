@@ -39,11 +39,11 @@
                  }
              };
              
-             /* Tell BOOST that AlgebraicVector-s do not automatically resize. Prevents segfaults. */
+             /* Tell BOOST that AlgebraicVector-s resizes. */
              template <>
              struct is_resizeable<DACE::AlgebraicVector<DACE::DA>>
              {
-                 typedef boost::false_type type;
+                 typedef boost::true_type type;
                  const static bool value = type::value;
              };
          }
