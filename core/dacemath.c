@@ -1377,7 +1377,7 @@ void daceHyperbolicArcCosine(const DACEDA *ina, DACEDA *inc)
 {
     DACEDA itemp;
     
-    if(daceGetConstant(ina) <= 1.0)
+    if(daceGetConstant(ina) < 1.0)
     {
         daceSetError(__func__, DACE_ERROR, 50);
         daceCreateConstant(inc, 0.0);
