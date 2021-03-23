@@ -409,3 +409,4 @@ AlgebraicVector<T> abs(const AlgebraicVector<T> &obj)
    }
    return result;
 }
+}; // Namespace
